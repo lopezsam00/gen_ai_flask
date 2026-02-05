@@ -9,4 +9,5 @@ def home():
 
 
 if __name__ == '__main__':
+    # Debug mode is enabled for development only. Do not use in production.
     app.run(debug=True)
