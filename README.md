@@ -29,4 +29,14 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The application will be available at `http://127.0.0.1:5000/` 
+The application will be available at `http://127.0.0.1:5000/`
+
+### Development Mode
+
+To enable debug mode for development (with auto-reload and detailed error pages):
+
+```bash
+FLASK_DEBUG=true python app.py
+```
+
+**Note:** Never enable debug mode in production environments. 
