@@ -1,15 +1,12 @@
-import os
-from flask import Flask
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def home():
-    return 'Hello, Flask!'
+@app.route("/generate", methods=["POST"])
+def generate():
+    return jsonify({"message": "AI response will be generated here"})
 
 
-if __name__ == '__main__':
-    # Use environment variable to control debug mode (defaults to False for safety)
-    debug_mode = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
-    app.run(debug=debug_mode)
+if __name__ == "__main__":
+    app.run(debug=True)
